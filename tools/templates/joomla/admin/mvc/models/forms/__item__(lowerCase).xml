@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="name"
+				type="text"
+				label="COM___component_name__(constantCase)___item__(constantCase)_NAME_LABEL"
+				description="COM___component_name__(constantCase)___item__(constantCase)_NAME_DESC"
+				size="40"
+				class="inputbox"
+				default=""
+				/>
+	</fieldset>
+</form>
