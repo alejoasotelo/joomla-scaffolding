@@ -82,7 +82,9 @@ class __component_name__View__item__ extends JViewLegacy
 		}
 
 		JToolbarHelper::title($title, '__item__(constantCase)');
+		JToolbarHelper::apply('__item__(constantCase).apply');
 		JToolbarHelper::save('__item__(constantCase).save');
+		JToolbarHelper::save2new('__item__(constantCase).save2new');
 		JToolbarHelper::cancel(
 			'__item__(constantCase).cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
