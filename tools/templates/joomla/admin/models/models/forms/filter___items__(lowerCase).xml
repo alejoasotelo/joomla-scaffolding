@@ -17,6 +17,17 @@
 			>
 			<option value="">JOPTION_SELECT_PUBLISHED</option>
 		</field>
+		<field
+			name="author_id"
+			type="author"
+			label="COM___component_name__(constantCase)_FILTER_AUTHOR"
+			description="COM___component_name__(constantCase)_FILTER_AUTHOR_DESC"
+			multiple="true"
+			class="multipleAuthors"
+			onchange="this.form.submit();"
+			>
+			<option value="0">JNONE</option>
+		</field>
 	</fields>
 	<fields name="list">
 		<field
