@@ -34,24 +34,26 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<th width="1%"><?php echo JText::_('COM___component_name__(constantCase)_NUM'); ?></th>
-					<th width="2%">
+					<th width="1%" class="nowrap center hidden-phone">
+						<?php echo JText::_('COM___component_name__(constantCase)_NUM'); ?>
+					</th>
+					<th width="1%" class="center">
 						<?php echo JHtml::_('grid.checkall'); ?>
 					</th>
-					<th width="5%">						
+					<th width="1%" class="nowrap center">					
                     	<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_PUBLISHED', 'published', $listDirn, $listOrder); ?>
 					</th>
-					<th width="90%">
+					<th style="min-width:100px" class="nowrap">
 						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)___items__(constantCase)_NAME', 'name', $listDirn, $listOrder); ?>
 					</th>
-					<th width="30%">
+					<th width="10%" class="nowrap hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_AUTHOR', 'author', $listDirn, $listOrder); ?>
 					</th>
-					<th width="30%">
+					<th width="10%" class="nowrap hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_CREATED_DATE', 'created', $listDirn, $listOrder); ?>
 					</th>
-					<th width="2%">
-						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_ID', 'id', $listDirn, $listOrder); ?>
+					<th width="1%" class="nowrap hidden-phone">
+						<?php echo JHtml::_('searchtools.sort', 'JGRID_HEADING_ID', 'id', $listDirn, $listOrder); ?>
 					</th>
 				</tr>
 			</thead>
@@ -68,27 +70,27 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 						$link = JRoute::_('index.php?option=com___component_name__(lowerCase)&task=__item__(lowerCase).edit&id=' . $row->id);
 					?>
 						<tr>
-							<td>
+							<td class="center">
 								<?php echo $this->pagination->getRowOffset($i); ?>
 							</td>
-							<td>
+							<td class="center">
 								<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 							</td>
-							<td align="center">
+							<td class="center">
 								<?php echo JHtml::_('jgrid.published', $row->published, $i, '__items__(lowerCase).', true, 'cb'); ?>
 							</td>
 							<td>
-								<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM___component_name__(constantCase)_EDIT___item__(constantCase)'); ?>">
-									<?php echo $row->name; ?>
+								<a href="<?php echo $link; ?>" class="hasTooltip" title="<?php echo JText::_('JACTION_EDIT'); ?>">
+								<?php echo $this->escape($row->name); ?></a>
 								</a>
 							</td>
-                            <td align="center">
+                            <td class="small hidden-phone">
                                 <?php echo $row->author; ?>
                             </td>
-                            <td align="center">
+                            <td class="nowrap small hidden-phone">
                                 <?php echo substr($row->created, 0, 10); ?>
                             </td>
-							<td align="center">
+							<td class="center">
 								<?php echo $row->id; ?>
 							</td>
 						</tr>
@@ -99,7 +101,5 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 	</div>
 	<input type="hidden" name="task" value=""/>
 	<input type="hidden" name="boxchecked" value="0"/>
-	<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>"/>
-	<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>"/>
 	<?php echo JHtml::_('form.token'); ?>
 </form>

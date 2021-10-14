@@ -17,6 +17,17 @@
 			>
 			<option value="">JOPTION_SELECT_PUBLISHED</option>
 		</field>
+		<field
+			name="author_id"
+			type="author"
+			label="COM___component_name__(constantCase)_FILTER_AUTHOR"
+			description="COM___component_name__(constantCase)_FILTER_AUTHOR_DESC"
+			multiple="true"
+			class="multipleAuthors"
+			onchange="this.form.submit();"
+			>
+			<option value="0">JNONE</option>
+		</field>
 	</fields>
 	<fields name="list">
 		<field
@@ -25,19 +36,20 @@
 			label="COM___component_name__(constantCase)_LIST_FULL_ORDERING"
 			description="COM___component_name__(constantCase)_LIST_FULL_ORDERING_DESC"
 			onchange="this.form.submit();"
-			default="name ASC"
+			default="a.name ASC"
+			validate="options"
 			>
 			<option value="">JGLOBAL_SORT_BY</option>
-			<option value="name ASC">COM___component_name__(constantCase)_ORDERING_ASC</option>
-			<option value="name DESC">COM___component_name__(constantCase)_ORDERING_DESC</option>
-			<option value="id ASC">JGRID_HEADING_ID_ASC</option>
-			<option value="id DESC">JGRID_HEADING_ID_DESC</option>
-			<option value="published ASC">COM___component_name__(constantCase)_PUBLISHED_ASC</option>
-			<option value="published DESC">COM___component_name__(constantCase)_PUBLISHED_DESC</option>
-			<option value="author ASC">COM___component_name__(constantCase)_AUTHOR_ASC</option>
-			<option value="author DESC">COM___component_name__(constantCase)_AUTHOR_DESC</option>
-			<option value="created ASC">COM___component_name__(constantCase)_CREATED_ASC</option>
-			<option value="created DESC">COM___component_name__(constantCase)_CREATED_DESC</option>
+			<option value="a.name ASC">COM___component_name__(constantCase)_ORDERING_ASC</option>
+			<option value="a.name DESC">COM___component_name__(constantCase)_ORDERING_DESC</option>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="a.published ASC">COM___component_name__(constantCase)_PUBLISHED_ASC</option>
+			<option value="a.published DESC">COM___component_name__(constantCase)_PUBLISHED_DESC</option>
+			<option value="a.created_by ASC">COM___component_name__(constantCase)_AUTHOR_ASC</option>
+			<option value="a.created_by DESC">COM___component_name__(constantCase)_AUTHOR_DESC</option>
+			<option value="a.created ASC">COM___component_name__(constantCase)_CREATED_ASC</option>
+			<option value="a.created DESC">COM___component_name__(constantCase)_CREATED_DESC</option>
 		</field>
 		<field
 			name="limit"
