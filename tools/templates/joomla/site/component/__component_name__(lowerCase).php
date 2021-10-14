@@ -10,14 +10,15 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-// Require helper file
-JLoader::register('__item__Helper', JPATH_COMPONENT . '/helpers/__item__(lowerCase).php');
 
 // Get an instance of the controller prefixed by HelloWorld
 $controller = JControllerLegacy::getInstance('__component_name__');
 
 // Perform the Request task
-$controller->execute(JFactory::getApplication()->input->get('task'));
+$controller->execute(JFactory::getApplication()->input->getCmd('task'));
 
 // Redirect if set by the controller
 $controller->redirect();
+
+
+

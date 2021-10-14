@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
     method="post" name="adminForm" id="adminForm">
     <div class="form-horizontal">
         <fieldset class="adminform">
-            <legend><?php echo JText::_('COM___component_name__(constantCase)___item__(lowerCase)_DETAILS'); ?></legend>
+            <legend><?php echo JText::_('COM___component_name__(constantCase)___item__(constantCase)_DETAILS'); ?></legend>
             <div class="row-fluid">
                 <div class="span6">
                     <?php 

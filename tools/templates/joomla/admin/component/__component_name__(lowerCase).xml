@@ -10,7 +10,7 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.1</version>
+	<version>__version__(dotCase)</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM___component_name__(constantCase)_DESCRIPTION</description>
 
@@ -40,11 +40,12 @@
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>models</folder>
+		<folder>controllers</folder>
 	</files>
 
-        <languages folder="site/language">
+    <languages folder="site/language">
 		<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>
-        </languages>
+    </languages>
 
 	<administration>
 		<!-- Administration Menu Section -->
@@ -68,6 +69,7 @@
 			<folder>views</folder>
 			<!-- controllers files section -->
 			<folder>controllers</folder>
+			<folder>helpers</folder>
 		</files>
 		<languages folder="admin/language">
         	<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>

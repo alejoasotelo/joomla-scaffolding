@@ -51,6 +51,9 @@ class __component_name__View__item__ extends JViewLegacy
 
 		// Display the template
 		parent::display($tpl);
+
+		// Set the document
+		$this->setDocument();
 	}
 
 	/**
@@ -84,5 +87,18 @@ class __component_name__View__item__ extends JViewLegacy
 			'__item__(constantCase).cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
 		);
+	}
+
+	/**
+	 * Method to set up the document properties
+	 *
+	 * @return void
+	 */
+	protected function setDocument() 
+	{
+		$isNew = ($this->item->id < 1);
+		$document = JFactory::getDocument();
+		$document->setTitle($isNew ? JText::_('COM___component_name__(constantCase)___item__(constantCase)_CREATING') :
+                JText::_('COM___component_name__(constantCase)___item__(constantCase)_EDITING'));
 	}
 }
