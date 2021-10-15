@@ -20,7 +20,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since   1.6
  */
-abstract class __item__Helper extends JHelperContent
+abstract class __component_name__(pascalCase)Helper extends JHelperContent
 {
 	/**
 	 * Configure the Linkbar.
@@ -32,7 +32,7 @@ abstract class __item__Helper extends JHelperContent
 	{
 		JHtmlSidebar::addEntry(
 			JText::_('COM___component_name__(constantCase)_SUBMENU___items__(constantCase)'),
-			'index.php?option=com___component_name__(lowerCase)',
+			'index.php?option=com___component_name__(lowerCase)&view=__items__(lowerCase)',
 			$submenu == '__items__(lowerCase)'
 		);
 	}

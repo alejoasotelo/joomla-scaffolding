@@ -48,7 +48,7 @@ class __component_name__View__items__ extends JViewLegacy
 		}
 		
 		// Set the submenu
-		__item__Helper::addSubmenu('__items__(lowerCase)');
+		__component_name__(pascalCase)Helper::addSubmenu('__items__(lowerCase)');
 
 		// Set the toolbar and number of found items
 		$this->addToolBar();

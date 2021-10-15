@@ -11,7 +11,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Require helper file
-JLoader::register('__item__Helper', JPATH_COMPONENT . '/helpers/__item__(lowerCase).php');
+JLoader::register('__component_name__(pascalCase)Helper', JPATH_COMPONENT . '/helpers/__component_name__(lowerCase).php');
 
 // Get an instance of the controller prefixed by HelloWorld
 $controller = JControllerLegacy::getInstance('__component_name__');
