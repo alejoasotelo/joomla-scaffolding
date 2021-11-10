@@ -34,11 +34,6 @@ let onComplete = async(results) => {
 
             // si ya existe en el destino el archivo completo, solo agrego.
             if (fs.existsSync(fileComplete)) {
-                // elimino el archivo __replace_full porque no se usa
-
-                console.log('FILE COMPLETE', fileComplete);
-                console.log('FILE REPLACE', fileReplace);
-
                 let contentOfFileComplete = fs.readFileSync(fileComplete).toString('utf8');
                 let contentToReplace = fs.readFileSync(fileReplace).toString('utf8');
 
