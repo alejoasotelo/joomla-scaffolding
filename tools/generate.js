@@ -63,7 +63,7 @@ let onComplete = async(results) => {
 
 generateTemplateFiles([
     {
-        option: 'Create Admin Component',
+        option: 'Admin Component',
         defaultCase: '(pascalCase)',
         entry: {
             folderPath: './tools/templates/joomla/admin/component',
@@ -76,20 +76,7 @@ generateTemplateFiles([
         },
     },
     {
-        option: 'Create Site Component',
-        defaultCase: '(pascalCase)',
-        entry: {
-            folderPath: './tools/templates/joomla/site/component',
-        },
-        stringReplacers: [{ question: 'Insert component name without "com_"', slot: '__component_name__' }, '__items__', '__item__'],
-        output: {
-            path: './dist/components/com___component_name__(lowerCase)/site/',
-            pathAndFileNameDefaultCase: '(lowerCase)',
-            overwrite: true,
-        },
-    },
-    {
-        option: 'Create Admin MVC',
+        option: 'Admin MVC',
         defaultCase: '(pascalCase)',
         entry: {
             folderPath: './tools/templates/joomla/admin/mvc/'
@@ -102,19 +89,7 @@ generateTemplateFiles([
         onComplete: onComplete
     },
     {
-        option: 'Create Admin Controller',
-        defaultCase: '(pascalCase)',
-        entry: {
-            folderPath: './tools/templates/joomla/admin/component/controllers/'
-        },
-        stringReplacers: [{ question: 'Insert component name without "com_"', slot: '__component_name__' }, '__items__', '__item__'],
-        output: {
-            path: './dist/components/com___component_name__(lowerCase)/admin/controllers/',
-            pathAndFileNameDefaultCase: '(lowerCase)',
-        },
-    },
-    {
-        option: 'Create Admin Model',
+        option: 'Admin Model',
         defaultCase: '(pascalCase)',
         entry: {
             folderPath: './tools/templates/joomla/admin/models/'
@@ -127,7 +102,7 @@ generateTemplateFiles([
         onComplete: onComplete
     },
     {
-        option: 'Create Admin View',
+        option: 'Admin View',
         defaultCase: '(pascalCase)',
         entry: {
             folderPath: './tools/templates/joomla/admin/views/'
@@ -138,5 +113,30 @@ generateTemplateFiles([
             pathAndFileNameDefaultCase: '(lowerCase)',
         },
         onComplete: onComplete
-    }
+    },
+    {
+        option: 'Admin Controller',
+        defaultCase: '(pascalCase)',
+        entry: {
+            folderPath: './tools/templates/joomla/admin/component/controllers/'
+        },
+        stringReplacers: [{ question: 'Insert component name without "com_"', slot: '__component_name__' }, '__items__', '__item__'],
+        output: {
+            path: './dist/components/com___component_name__(lowerCase)/admin/controllers/',
+            pathAndFileNameDefaultCase: '(lowerCase)',
+        },
+    },
+    {
+        option: 'Site Component',
+        defaultCase: '(pascalCase)',
+        entry: {
+            folderPath: './tools/templates/joomla/site/component',
+        },
+        stringReplacers: [{ question: 'Insert component name without "com_"', slot: '__component_name__' }, '__items__', '__item__'],
+        output: {
+            path: './dist/components/com___component_name__(lowerCase)/site/',
+            pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
+        },
+    },
 ]);
