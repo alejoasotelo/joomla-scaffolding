@@ -80,6 +80,7 @@ generateTemplateFiles([
         output: {
             path: './dist/components/com___component_name__(lowerCase)/admin/',
             pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
         },
         onComplete: onComplete
     },
@@ -93,6 +94,7 @@ generateTemplateFiles([
         output: {
             path: './dist/components/com___component_name__(lowerCase)/admin/',
             pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
         },
         onComplete: onComplete
     },
@@ -106,6 +108,7 @@ generateTemplateFiles([
         output: {
             path: './dist/components/com___component_name__(lowerCase)/admin/',
             pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
         },
         onComplete: onComplete
     },
@@ -119,6 +122,7 @@ generateTemplateFiles([
         output: {
             path: './dist/components/com___component_name__(lowerCase)/admin/controllers/',
             pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
         },
     },
     {
