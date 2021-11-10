@@ -74,11 +74,11 @@ class __component_name__View__item__ extends JViewLegacy
 
 		if ($isNew)
 		{
-			$title = JText::_('COM___component_name__(constantCase)_MANAGER___item__(constantCase)_NEW');
+			$title = JText::_('COM___component_name__(constantCase)___item__(constantCase)_MANAGER_NEW');
 		}
 		else
 		{
-			$title = JText::_('COM___component_name__(constantCase)_MANAGER___item__(constantCase)_EDIT');
+			$title = JText::_('COM___component_name__(constantCase)___item__(constantCase)_MANAGER_EDIT');
 		}
 
 		JToolbarHelper::title($title, '__item__(constantCase)');

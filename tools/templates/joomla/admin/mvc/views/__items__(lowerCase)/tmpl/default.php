@@ -41,7 +41,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 						<?php echo JHtml::_('grid.checkall'); ?>
 					</th>
 					<th width="1%" class="nowrap center">					
-                    	<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_PUBLISHED', 'published', $listDirn, $listOrder); ?>
+                    	<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'published', $listDirn, $listOrder); ?>
 					</th>
 					<th style="min-width:100px" class="nowrap">
 						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)___items__(constantCase)_NAME', 'name', $listDirn, $listOrder); ?>
@@ -88,7 +88,9 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
                                 <?php echo $row->author; ?>
                             </td>
                             <td class="nowrap small hidden-phone">
-                                <?php echo substr($row->created, 0, 10); ?>
+								<?php
+									echo $row->created > 0 ? JHtml::_('date', $row->created, JText::_('DATE_FORMAT_LC5')) : '-';
+								?>
                             </td>
 							<td class="center">
 								<?php echo $row->id; ?>

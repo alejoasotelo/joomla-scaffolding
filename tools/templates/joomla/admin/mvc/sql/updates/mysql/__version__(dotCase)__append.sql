@@ -8,10 +8,7 @@ CREATE TABLE IF NOT EXISTS `#____component_name__(lowerCase)___item__(lowerCase)
 	`modified_by` int unsigned NOT NULL DEFAULT 0,
 	`published` tinyint(4) NOT NULL DEFAULT '1',
 	PRIMARY KEY (`id`)
-)
-	ENGINE =MyISAM
-	AUTO_INCREMENT =0
-	DEFAULT CHARSET =utf8;
+) ENGINE=MyISAM	AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 INSERT INTO `#____component_name__(lowerCase)___item__(lowerCase)` (`name`, `created`) VALUES
 ('Hello World!', now()),

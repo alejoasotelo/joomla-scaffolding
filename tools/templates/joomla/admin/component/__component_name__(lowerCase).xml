@@ -50,6 +50,13 @@
 	<administration>
 		<!-- Administration Menu Section -->
 		<menu link='index.php?option=com___component_name__(lowerCase)'>COM___component_name__(constantCase)_MENU</menu>
+				
+        <menu>COM___component_name__(constantCase)_MENU</menu>
+        <submenu>
+            <menu link="option=com___component_name__(lowerCase)">__items__</menu>
+            <!--<menu option="com___component_name__(lowerCase)" view="__items__(lowerCase)">COM___component_name__(constantCase)_MENU___items__(constantCase)</menu>-->
+            <menu link="option=com_config&amp;view=component&amp;component=com___component_name__(lowerCase)">COM___component_name__(constantCase)_MENU_CONFIG</menu>
+        </submenu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 			to copy FROM in the package to install therefore files copied

@@ -1,4 +1,7 @@
-CREATE TABLE IF NOT EXISTS `#____component_name__(lowerCase)___item__(lowerCase)` (
+
+DROP TABLE IF EXISTS `#____component_name__(lowerCase)___item__(lowerCase)`;
+
+CREATE TABLE `#____component_name__(lowerCase)___item__(lowerCase)` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(25) NOT NULL,
 	`created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

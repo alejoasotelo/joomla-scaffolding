@@ -10,6 +10,10 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+JHtml::_('behavior.formvalidator');
+JHtml::_('behavior.keepalive');
+JHtml::_('formbehavior.chosen', 'select');
+
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com___component_name__(lowerCase)&layout=edit&id=' . (int) $this->item->id); ?>"
     method="post" name="adminForm" id="adminForm">

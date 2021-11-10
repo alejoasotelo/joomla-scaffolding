@@ -69,7 +69,7 @@ class __component_name__View__items__ extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
-		$title = JText::_('COM___component_name__(constantCase)_MANAGER___items__(constantCase)');
+		$title = JText::_('COM___component_name__(constantCase)___items__(constantCase)_MANAGER');
 
 		if ($this->pagination->total) {
 			$title .= "<span style='font-size: 0.5em; vertical-align: middle;'>(" . $this->pagination->total . ")</span>";
