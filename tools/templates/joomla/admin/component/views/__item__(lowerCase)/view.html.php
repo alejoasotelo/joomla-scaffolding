@@ -81,12 +81,12 @@ class __component_name__View__item__ extends JViewLegacy
 			$title = JText::_('COM___component_name__(constantCase)___item__(constantCase)_MANAGER_EDIT');
 		}
 
-		JToolbarHelper::title($title, '__item__(constantCase)');
-		JToolbarHelper::apply('__item__(constantCase).apply');
-		JToolbarHelper::save('__item__(constantCase).save');
-		JToolbarHelper::save2new('__item__(constantCase).save2new');
+		JToolbarHelper::title($title, '__item__(lowerCase)');
+		JToolbarHelper::apply('__item__(lowerCase).apply');
+		JToolbarHelper::save('__item__(lowerCase).save');
+		JToolbarHelper::save2new('__item__(lowerCase).save2new');
 		JToolbarHelper::cancel(
-			'__item__(constantCase).cancel',
+			'__item__(lowerCase).cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
 		);
 	}

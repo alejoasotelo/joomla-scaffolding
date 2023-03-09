@@ -41,10 +41,12 @@
 		<folder>views</folder>
 		<folder>models</folder>
 		<folder>controllers</folder>
+		<folder>language</folder>
 	</files>
 
     <languages folder="site/language">
 		<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>
+		<language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).ini</language>
     </languages>
 
 	<administration>
@@ -55,6 +57,7 @@
         <submenu>
             <menu link="option=com___component_name__(lowerCase)">__items__</menu>
             <!--<menu option="com___component_name__(lowerCase)" view="__items__(lowerCase)">COM___component_name__(constantCase)_MENU___items__(constantCase)</menu>-->
+			<!--__replace__-->  
             <menu link="option=com_config&amp;view=component&amp;component=com___component_name__(lowerCase)">COM___component_name__(constantCase)_MENU_CONFIG</menu>
         </submenu>
 		<!-- Administration Main File Copy Section -->
@@ -66,6 +69,8 @@
 			<filename>index.html</filename>
 			<filename>__component_name__(lowerCase).php</filename>
 			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>phrwatcher.php</filename>
 			<!-- SQL files section -->
 			<folder>sql</folder>
 			<!-- tables files section -->
@@ -77,10 +82,14 @@
 			<!-- controllers files section -->
 			<folder>controllers</folder>
 			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>php-hot-reloader</folder>
 		</files>
 		<languages folder="admin/language">
         	<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>
             <language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).sys.ini</language>
+        	<language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).ini</language>
+            <language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).sys.ini</language>
 		</languages>
 	</administration>
 

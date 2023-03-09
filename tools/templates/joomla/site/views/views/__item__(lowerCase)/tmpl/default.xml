@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM___component_name__(constantCase)___item__(constantCase)_VIEW_DEFAULT_TITLE">
+		<message>COM___component_name__(constantCase)___item__(constantCase)_VIEW_DEFAULT_DESC</message>
+	</layout>
+	<fields	name="request" addfieldpath="/administrator/components/com___component_name__(lowerCase)/models/fields">
+		<fieldset name="request">
+			<field
+				name="id"
+				type="__item__(lowerCase)"
+				label="COM___component_name__(constantCase)___item__(constantCase)_FIELD_NAME_LABEL"
+				description="COM___component_name__(constantCase)___item__(constantCase)_FIELD_NAME_DESC"
+				/>
+		</fieldset>
+	</fields>
+</metadata>

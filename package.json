@@ -8,7 +8,10 @@
     "generate-template-files": "^3.2.0"
   },
   "scripts": {
-    "generate": "node tools/generate.js"
+    "generate": "node tools/generate.js",
+    "generate:admin": "node tools/cli.js admin-component",
+    "generate:site": "node tools/cli.js site-component",
+    "generate:mvc": "node tools/cli.js admin-mvc"
   },
   "author": "",
   "license": "ISC"

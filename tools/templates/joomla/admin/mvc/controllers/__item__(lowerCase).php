@@ -17,4 +17,5 @@ defined('_JEXEC') or die('Restricted access');
  */
 class __component_name__Controller__item__ extends JControllerForm
 {
+	protected $view_list = '__items__(lowerCase)';
 }

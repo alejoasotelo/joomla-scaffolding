@@ -22,7 +22,6 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 	<div id="j-main-container" class="span10">
 		<div class="row-fluid">
 			<div class="span12">
-				<?php echo JText::_('COM___component_name__(constantCase)___items__(constantCase)_FILTER'); ?>
 				<?php
 					echo JLayoutHelper::render(
 						'joomla.searchtools.default',
@@ -50,7 +49,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_AUTHOR', 'author', $listDirn, $listOrder); ?>
 					</th>
 					<th width="10%" class="nowrap hidden-phone">
-						<?php echo JHtml::_('searchtools.sort', 'COM___component_name__(constantCase)_CREATED_DATE', 'created', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('searchtools.sort', 'JGLOBAL_CREATED_DATE', 'created', $listDirn, $listOrder); ?>
 					</th>
 					<th width="1%" class="nowrap hidden-phone">
 						<?php echo JHtml::_('searchtools.sort', 'JGRID_HEADING_ID', 'id', $listDirn, $listOrder); ?>
@@ -70,7 +69,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 						$link = JRoute::_('index.php?option=com___component_name__(lowerCase)&task=__item__(lowerCase).edit&id=' . $row->id);
 					?>
 						<tr>
-							<td class="center">
+							<td class="center hidden-phone">
 								<?php echo $this->pagination->getRowOffset($i); ?>
 							</td>
 							<td class="center">
@@ -81,7 +80,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 							</td>
 							<td>
 								<a href="<?php echo $link; ?>" class="hasTooltip" title="<?php echo JText::_('JACTION_EDIT'); ?>">
-								<?php echo $this->escape($row->name); ?></a>
+									<?php echo $this->escape($row->name); ?>
 								</a>
 							</td>
                             <td class="small hidden-phone">
@@ -92,7 +91,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 									echo $row->created > 0 ? JHtml::_('date', $row->created, JText::_('DATE_FORMAT_LC5')) : '-';
 								?>
                             </td>
-							<td class="center">
+							<td class="center hidden-phone">
 								<?php echo $row->id; ?>
 							</td>
 						</tr>

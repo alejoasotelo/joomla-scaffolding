@@ -14,6 +14,19 @@ JHtml::_('behavior.formvalidator');
 JHtml::_('behavior.keepalive');
 JHtml::_('formbehavior.chosen', 'select');
 
+$app = JFactory::getApplication();
+$input = $app->input;
+
+JFactory::getDocument()->addScriptDeclaration('
+	Joomla.submitbutton = function(task)
+	{
+		if (task == "__item__(lowerCase).cancel" || document.formvalidator.isValid(document.getElementById("adminForm")))
+		{
+			Joomla.submitform(task, document.getElementById("adminForm"));
+		}
+	};
+');
+
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com___component_name__(lowerCase)&layout=edit&id=' . (int) $this->item->id); ?>"
     method="post" name="adminForm" id="adminForm">
@@ -32,5 +45,6 @@ JHtml::_('formbehavior.chosen', 'select');
         </fieldset>
     </div>
     <input type="hidden" name="task" value="__item__(lowerCase).edit" />
+	<input type="hidden" name="return" value="<?php echo $input->get('return', null, 'BASE64'); ?>" />
     <?php echo JHtml::_('form.token'); ?>
 </form>

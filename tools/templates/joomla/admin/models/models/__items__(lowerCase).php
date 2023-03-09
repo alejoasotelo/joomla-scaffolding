@@ -85,16 +85,16 @@ class __component_name__Model__items__ extends JModelList
 
 		if (!empty($search)) {
 			$like = $db->quote('%' . $search . '%');
-			$query->where('name LIKE ' . $like);
+			$query->where('a.name LIKE ' . $like);
 		}
 
 		// Filter by published state
 		$published = $this->getState('filter.published');
 
 		if (is_numeric($published)) {
-			$query->where('published = ' . (int) $published);
+			$query->where('a.published = ' . (int) $published);
 		} elseif ($published === '') {
-			$query->where('(published IN (0, 1))');
+			$query->where('(a.published IN (0, 1))');
 		}
 
 		// Add the list ordering clause.

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM___component_name__(constantCase)</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>January 2021</creationDate>
+	<author>John Doe</author>
+	<authorEmail>john.doe@example.org</authorEmail>
+	<authorUrl>http://www.example.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>__version__(dotCase)</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>COM___component_name__(constantCase)_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>__component_name__(lowerCase).php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>language</folder>
+	</files>
+
+    <languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>
+		<language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).ini</language>
+    </languages>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com___component_name__(lowerCase)'>COM___component_name__(constantCase)_MENU</menu>
+				
+        <menu>COM___component_name__(constantCase)_MENU</menu>
+        <submenu>
+            <menu link="option=com___component_name__(lowerCase)">__items__</menu>
+            <!--<menu option="com___component_name__(lowerCase)" view="__items__(lowerCase)">COM___component_name__(constantCase)_MENU___items__(constantCase)</menu>-->
+			<!--__replace__-->  
+            <menu link="option=com_config&amp;view=component&amp;component=com___component_name__(lowerCase)">COM___component_name__(constantCase)_MENU_CONFIG</menu>
+        </submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>__component_name__(lowerCase).php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>phrwatcher.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>php-hot-reloader</folder>
+		</files>
+		<languages folder="admin/language">
+        	<language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).ini</language>
+            <language tag="en-GB">en-GB/en-GB.com___component_name__(lowerCase).sys.ini</language>
+        	<language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).ini</language>
+            <language tag="es-ES">es-ES/es-ES.com___component_name__(lowerCase).sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

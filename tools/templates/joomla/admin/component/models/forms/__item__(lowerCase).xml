@@ -38,9 +38,9 @@
 		</field>
 
 		<field
-			name="buttonspacer"
+			name="spacer"
 			type="spacer"
-			description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+			hr="true"
 		/>
 
 		<field

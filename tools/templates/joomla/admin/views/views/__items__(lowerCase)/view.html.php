@@ -79,6 +79,7 @@ class __component_name__View__items__ extends JViewLegacy
 		JToolbarHelper::addNew('__item__(lowerCase).add');
 		JToolbarHelper::editList('__item__(lowerCase).edit');
 		JToolbarHelper::deleteList('', '__items__(lowerCase).delete');
+		JToolBarHelper::preferences('com___component_name__(lowerCase)');
 	}
 
 	/**

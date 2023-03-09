@@ -21,3 +21,6 @@ $controller->execute(JFactory::getApplication()->input->get('task'));
 
 // Redirect if set by the controller
 $controller->redirect();
+
+require_once __DIR__ . "/php-hot-reloader/src/HotReloader.php"; 
+new HotReloader\HotReloader('//127.0.0.1/administrator/components/com___component_name__(lowerCase)/phrwatcher.php');
