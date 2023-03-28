@@ -142,6 +142,20 @@ module.exports = [
         },
     },
     {
+        option: 'Site MVC',
+        defaultCase: '(pascalCase)',
+        entry: {
+            folderPath: './tools/templates/joomla/site/mvc/'
+        },
+        stringReplacers: [{ question: 'Insert component name without "com_"', slot: '__component_name__' }, '__version__', '__items__', '__item__'],
+        output: {
+            path: './dist/components/com___component_name__(lowerCase)/site/',
+            pathAndFileNameDefaultCase: '(lowerCase)',
+            overwrite: true,
+        },
+        onComplete: onComplete
+    },
+    {
         option: 'Site View',
         defaultCase: '(pascalCase)',
         entry: {

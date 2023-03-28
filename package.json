@@ -11,7 +11,8 @@
     "generate": "node tools/generate.js",
     "generate:admin": "node tools/cli.js admin-component",
     "generate:site": "node tools/cli.js site-component",
-    "generate:mvc": "node tools/cli.js admin-mvc"
+    "generate:mvc": "node tools/cli.js admin-mvc",
+    "generate:site:mvc": "node tools/cli.js site-mvc"
   },
   "author": "",
   "license": "ISC"
